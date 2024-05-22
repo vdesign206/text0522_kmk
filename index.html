@@ -84,7 +84,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script>
         const aniDuration = 3;
-        gsap.to('.box', {duration: aniDuration, x: 300, y: 300, rotation: 360, ease: 'elastic.out(1, 0.3)', yoyo:true})
+        gsap.to('.box', {duration: aniDuration, x: 300, y: 300, rotation: 360, ease:'elastic.out(1, 0.3)',repeat:2});
+        // gsap.to('.box', {duration: aniDuration, x: 300, y: 300, rotation: 360, ease: 'elastic.out(1, 0.3)', yoyo:true})
 
         const horizontal = document.querySelector('.horizontal');
         const vertical = document.querySelector('.vertical');
@@ -105,7 +106,7 @@
                 horizontal.style.transform = `translateY(${y}px)`;
                 target.style.transform = `translate(${x - targetHalfWidth}px, ${y - targetHalfHeight}px)`;
                 tag.style.transform = `translate(${x}px, ${y}px)`;
-                tag.innerHTML = `${x}px, ${y}px`;
+                tag.innerText = `${x}px, ${y}px`;
             });
         });
 
